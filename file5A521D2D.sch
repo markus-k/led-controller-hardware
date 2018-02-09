@@ -1,0 +1,268 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:stm32
+LIBS:custom
+LIBS:infineon
+LIBS:mechanical
+LIBS:graphic_symbols
+LIBS:ir
+LIBS:Power_Management
+LIBS:switches
+LIBS:led-controller-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title "LED controller"
+Date ""
+Rev "A"
+Comp "Markus Kasten"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATWINC15x0 U4
+U 1 1 5A6DBC10
+P 5300 3250
+F 0 "U4" H 4800 3950 60  0000 C CNN
+F 1 "ATWINC15x0" H 5300 3250 60  0000 C CNN
+F 2 "ATWINC15x0:ATWINC15x0" H 6100 3950 60  0001 C CNN
+F 3 "" H 5300 3250 60  0001 C CNN
+	1    5300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C12
+U 1 1 5A6DC2A6
+P 3800 3450
+F 0 "C12" H 3825 3550 50  0000 L CNN
+F 1 "10n" H 3825 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3838 3300 50  0001 C CNN
+F 3 "" H 3800 3450 50  0001 C CNN
+	1    3800 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C11
+U 1 1 5A6DC2EA
+P 3550 3450
+F 0 "C11" H 3575 3550 50  0000 L CNN
+F 1 "10u" H 3575 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 3300 50  0001 C CNN
+F 3 "" H 3550 3450 50  0001 C CNN
+	1    3550 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3200 4500 3200
+Wire Wire Line
+	3550 3200 3550 3300
+Wire Wire Line
+	3800 3300 3800 3200
+Connection ~ 3800 3200
+Wire Wire Line
+	3800 3600 3800 3700
+Wire Wire Line
+	3800 3700 3550 3700
+Wire Wire Line
+	3550 3600 3550 3800
+$Comp
+L GND #PWR063
+U 1 1 5A6DC3CD
+P 3550 3800
+F 0 "#PWR063" H 3550 3550 50  0001 C CNN
+F 1 "GND" H 3550 3650 50  0000 C CNN
+F 2 "" H 3550 3800 50  0001 C CNN
+F 3 "" H 3550 3800 50  0001 C CNN
+	1    3550 3800
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 3700
+Wire Wire Line
+	5450 4200 5450 4100
+Wire Wire Line
+	5150 4200 5450 4200
+Wire Wire Line
+	5150 4100 5150 4300
+Wire Wire Line
+	5250 4100 5250 4200
+Connection ~ 5250 4200
+Wire Wire Line
+	5350 4100 5350 4200
+Connection ~ 5350 4200
+$Comp
+L GND #PWR064
+U 1 1 5A6DC4AE
+P 5150 4300
+F 0 "#PWR064" H 5150 4050 50  0001 C CNN
+F 1 "GND" H 5150 4150 50  0000 C CNN
+F 2 "" H 5150 4300 50  0001 C CNN
+F 3 "" H 5150 4300 50  0001 C CNN
+	1    5150 4300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 4200
+$Comp
+L +3.3V #PWR065
+U 1 1 5A6DC582
+P 5350 2200
+F 0 "#PWR065" H 5350 2050 50  0001 C CNN
+F 1 "+3.3V" H 5350 2340 50  0000 C CNN
+F 2 "" H 5350 2200 50  0001 C CNN
+F 3 "" H 5350 2200 50  0001 C CNN
+	1    5350 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2200 5350 2400
+$Comp
+L R R29
+U 1 1 5A6DC9CE
+P 6200 2450
+F 0 "R29" V 6280 2450 50  0000 C CNN
+F 1 "1M" V 6200 2450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 6130 2450 50  0001 C CNN
+F 3 "" H 6200 2450 50  0001 C CNN
+	1    6200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR066
+U 1 1 5A6DCA51
+P 6200 2200
+F 0 "#PWR066" H 6200 2050 50  0001 C CNN
+F 1 "+3.3V" H 6200 2340 50  0000 C CNN
+F 2 "" H 6200 2200 50  0001 C CNN
+F 3 "" H 6200 2200 50  0001 C CNN
+	1    6200 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2700 6200 2700
+Wire Wire Line
+	6200 2700 6200 2600
+Wire Wire Line
+	6200 2300 6200 2200
+$Comp
+L R R28
+U 1 1 5A6DCB59
+P 3850 2800
+F 0 "R28" V 3930 2800 50  0000 C CNN
+F 1 "1M" V 3850 2800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3780 2800 50  0001 C CNN
+F 3 "" H 3850 2800 50  0001 C CNN
+	1    3850 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 2800 4500 2800
+$Comp
+L GND #PWR067
+U 1 1 5A6DCC52
+P 3600 2900
+F 0 "#PWR067" H 3600 2650 50  0001 C CNN
+F 1 "GND" H 3600 2750 50  0000 C CNN
+F 2 "" H 3600 2900 50  0001 C CNN
+F 3 "" H 3600 2900 50  0001 C CNN
+	1    3600 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2800 3600 2800
+Wire Wire Line
+	3600 2700 3600 2900
+$Comp
+L R R27
+U 1 1 5A6DCE5D
+P 3850 2700
+F 0 "R27" V 3930 2700 50  0000 C CNN
+F 1 "1M" V 3850 2700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3780 2700 50  0001 C CNN
+F 3 "" H 3850 2700 50  0001 C CNN
+	1    3850 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 2700 4500 2700
+Wire Wire Line
+	4400 2800 4400 2600
+Connection ~ 4400 2800
+Text HLabel 4400 2600 1    60   Input ~ 0
+ENABLE
+Text HLabel 6200 2800 2    60   Input ~ 0
+SPI_MOSI
+Text HLabel 6200 2900 2    60   Output ~ 0
+SPI_MISO
+Text HLabel 6200 3000 2    60   Input ~ 0
+SPI_SCK
+Text HLabel 6200 3100 2    60   Input ~ 0
+SPI_CS
+Wire Wire Line
+	6200 2800 6100 2800
+Wire Wire Line
+	6200 2900 6100 2900
+Wire Wire Line
+	6100 3000 6200 3000
+Wire Wire Line
+	6100 3100 6200 3100
+Text HLabel 4400 3000 0    60   Output ~ 0
+IRQ
+Text HLabel 4400 2900 0    60   Input ~ 0
+WAKE
+Wire Wire Line
+	4400 2900 4500 2900
+Wire Wire Line
+	4500 3000 4400 3000
+Text HLabel 4400 3400 0    60   Input ~ 0
+UART_RX
+Text HLabel 4400 3500 0    60   Output ~ 0
+UART_TX
+Wire Wire Line
+	4500 3400 4400 3400
+Wire Wire Line
+	4400 3500 4500 3500
+Text HLabel 4300 2600 1    60   Input ~ 0
+RESET
+Wire Wire Line
+	4300 2600 4300 2700
+Connection ~ 4300 2700
+Wire Wire Line
+	3700 2700 3600 2700
+Connection ~ 3600 2800
+Wire Wire Line
+	5350 2300 5250 2300
+Wire Wire Line
+	5250 2300 5250 2400
+Connection ~ 5350 2300
+$EndSCHEMATC

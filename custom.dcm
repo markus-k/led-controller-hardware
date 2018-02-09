@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BTS432E2
+D Smart Highside Power Switch 11A
+$ENDCMP
+#
+$CMP BTS462
+D Smart Highside Power Switch 3,5A
+$ENDCMP
+#
+$CMP MCP16301
+D High-Voltage Input Integrated Switch Step-Down Regulator
+$ENDCMP
+#
+#End Doc Library
