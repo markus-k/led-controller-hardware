@@ -1,6 +1,8 @@
 #  12 channel LED controller (hardware files)
 
-This repository contains all KiCad project files for my LED controller project.
+This repository contains all KiCad project files for my LED controller project. More information about this project can be found on [Hackaday.io](https://hackaday.io/project/47190-12-channel-led-controller).
+
+![Rendered PCB](led-controller.png)
 
 ## License
 
